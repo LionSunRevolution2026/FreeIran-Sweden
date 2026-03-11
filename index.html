@@ -5,731 +5,248 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN46JLLP0X"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GN46JLLP0X');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GN46JLLP0X');
 </script>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Sweden Email Campaign</title>
 
 <meta property="og:title" content="Sweden email campaign">
 <meta property="og:description" content="Send email to members of the Swedish Parliament">
-<meta property="og:image" content="https://LionSunRevolution2026.github.io/FreeIran-Sweden/Sweden.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://LionSunRevolution2026.github.io/FreeIran-Sweden/">
 
 <style>
-  :root{
-    --bg0:#07131c; --bg1:#071a26; --bg2:#061018;
-    --card0:#0e2533; --card1:#0b1f2c;
-    --border:rgba(255,255,255,.10);
-    --text:#e8f2ff;
-    --muted:rgba(232,242,255,.78);
-    --accent:#6fcf97;
-    --info0:rgba(111,207,151,.10);
-    --info1:rgba(111,207,151,.25);
-    --inputBg:rgba(255,255,255,.06);
-  }
+:root{
+--bg0:#07131c; --bg1:#071a26; --bg2:#061018;
+--card0:#0e2533; --card1:#0b1f2c;
+--border:rgba(255,255,255,.10);
+--text:#e8f2ff;
+--muted:rgba(232,242,255,.78);
+--accent:#6fcf97;
+--info0:rgba(111,207,151,.10);
+--info1:rgba(111,207,151,.25);
+--inputBg:rgba(255,255,255,.06);
+}
 
-  *{box-sizing:border-box}
+body{
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+max-width:980px;
+margin:34px auto;
+padding:0 16px 30px;
+line-height:1.6;
+color:var(--text);
+background:
+radial-gradient(1200px 700px at 20% 10%, rgba(47,192,214,.10), transparent 55%),
+radial-gradient(900px 600px at 80% 0%, rgba(60,120,255,.10), transparent 50%),
+linear-gradient(180deg,var(--bg1),var(--bg0) 55%,var(--bg2));
+}
 
-  body{
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    max-width:980px;
-    margin:34px auto;
-    padding:0 16px 30px;
-    line-height:1.6;
-    color:var(--text);
-    background:
-      radial-gradient(1200px 700px at 20% 10%, rgba(47,192,214,.10), transparent 55%),
-      radial-gradient(900px 600px at 80% 0%, rgba(60,120,255,.10), transparent 50%),
-      linear-gradient(180deg, var(--bg1), var(--bg0) 55%, var(--bg2));
-  }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:14px;
+}
 
-  .topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-    margin-bottom:14px;
-  }
+.titleRow{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-  .titleRow{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
+.badgeIcon{
+width:55px;
+height:55px;
+font-size:35px;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,.06);
+border:1px solid var(--border);
+}
 
-  .badgeIcon{
-    width:55px;
-    height:55px;
-    font-size:35px;
-    border-radius:12px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,.06);
-    border:1px solid var(--border);
-    box-shadow:0 10px 24px rgba(0,0,0,.35);
-  }
+h1{margin:0;font-size:32px}
+.subtitle{color:var(--muted);white-space:pre-line}
 
-  h1{margin:0;font-size:32px;letter-spacing:.2px}
-  .subtitle{margin:4px 0 0;color:var(--muted);white-space:pre-line}
+button{
+padding:10px 12px;
+border-radius:12px;
+background:rgba(255,255,255,.06);
+border:1px solid var(--border);
+color:#fff;
+font-weight:700;
+cursor:pointer;
+}
 
-  button, a.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:12px 14px;
-    border-radius:14px;
-    border:1px solid rgba(255,255,255,.14);
-    background:rgba(255,255,255,.06);
-    color:#fff;
-    font-weight:800;
-    cursor:pointer;
-    text-decoration:none;
-    transition:transform .05s ease, background .2s ease;
-    user-select:none;
-  }
+.card{
+background:linear-gradient(180deg,var(--card0),var(--card1));
+border:1px solid var(--border);
+border-radius:20px;
+padding:16px;
+margin:14px 0;
+}
 
-  button:active{transform:translateY(1px)}
-  button:disabled{opacity:.5;cursor:not-allowed}
+pre{
+white-space:pre-wrap;
+background:rgba(0,0,0,.18);
+border:1px solid rgba(255,255,255,.1);
+border-radius:12px;
+padding:14px;
+}
 
-  .langBtn{
-    padding:10px 12px;
-    border-radius:14px;
-    background:rgba(255,255,255,.04);
-  }
+input{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,.14);
+background:var(--inputBg);
+color:var(--text);
+}
 
-  .card{
-    background:
-      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)),
-      linear-gradient(180deg, var(--card0), var(--card1));
-    border:1px solid var(--border);
-    border-radius:22px;
-    padding:16px;
-    margin:14px 0;
-    box-shadow:
-      0 22px 60px rgba(0,0,0,.55),
-      0 1px 0 rgba(255,255,255,.05) inset;
-  }
-
-  .emailTextCard pre{
-    margin:10px 0 0;
-    white-space:pre-wrap;
-    background:rgba(0,0,0,.18);
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:14px;
-    padding:14px;
-    color:rgba(232,242,255,.94);
-    font-family:inherit;
-    line-height:1.7;
-  }
-
-  .signatureCard{
-    background:var(--info0);
-    border:1px solid var(--info1);
-  }
-
-  .signatureTitle{
-    margin:0 0 8px;
-    font-size:20px;
-  }
-
-  .signatureText{
-    color:var(--muted);
-    margin:0 0 12px;
-    white-space:pre-line;
-  }
-
-  .inputWrap{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-  }
-
-  .label{
-    font-weight:700;
-  }
-
-  .nameInput{
-    width:100%;
-    padding:14px 16px;
-    border-radius:14px;
-    border:1px solid rgba(255,255,255,.14);
-    background:var(--inputBg);
-    color:var(--text);
-    font-size:16px;
-    outline:none;
-  }
-
-  .nameInput::placeholder{
-    color:rgba(232,242,255,.45);
-  }
-
-  .inputHint{
-    color:var(--muted);
-    font-size:.95rem;
-    margin:0;
-  }
-
-  .panel{
-    border-radius:22px;
-    padding:16px;
-    border:1px solid var(--border);
-    background:rgba(255,255,255,.03);
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 18px 44px rgba(0,0,0,.42);
-    margin-top:14px;
-  }
-
-  .panel::before{
-    content:"";
-    position:absolute;
-    inset:-2px;
-    opacity:.22;
-    background: radial-gradient(900px 320px at 0% 0%, var(--accent), transparent 55%);
-    pointer-events:none;
-  }
-
-  .panelHeader{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:10px;
-    position:relative;
-  }
-
-  .panelTitle{margin:0;font-size:22px;line-height:1.25}
-
-  .pill{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 12px;
-    border-radius:999px;
-    border:1px solid rgba(255,255,255,.16);
-    background:rgba(0,0,0,.15);
-    font-weight:900;
-    white-space:nowrap;
-  }
-
-  .dot{
-    width:10px;
-    height:10px;
-    border-radius:999px;
-    background:var(--accent);
-    box-shadow:0 0 0 3px rgba(255,255,255,.06);
-  }
-
-  .meta{margin:10px 0 12px;color:var(--muted);position:relative}
-
-  .sendBox{
-    position:relative;
-    border-radius:18px;
-    padding:14px;
-    border:1px solid rgba(255,255,255,.10);
-    background:rgba(0,0,0,.16);
-  }
-
-  .sendBtn{
-    width:100%;
-    padding:14px 14px;
-    border-radius:16px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.16);
-    font-size:16px;
-  }
-
-  .statusLine{margin-top:10px;color:var(--muted)}
-  .bullets{margin:10px 0 0 18px;color:var(--muted)}
-  .bullets li{margin:6px 0}
-
-  details{margin-top:10px}
-  details summary{cursor:pointer;font-weight:900}
-
-  .mono{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-    unicode-bidi:plaintext;
-    word-break:break-word;
-  }
-
-  pre.mono{
-    white-space:pre-wrap;
-    background:rgba(0,0,0,.22);
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:14px;
-    padding:12px;
-    margin:10px 0 0;
-    color:rgba(232,242,255,.92);
-  }
-
-  .files{margin-top:10px;color:var(--muted);font-size:.95rem}
-  .error{color:#ffb4b4}
-
-  @media (max-width:700px){
-    .topbar{
-      flex-direction:column;
-      align-items:flex-start;
-    }
-  }
+.sendBtn{
+width:100%;
+padding:14px;
+border-radius:14px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.16);
+font-weight:700;
+}
 </style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    <div class="titleRow">
-      <div class="badgeIcon">🕊️</div>
-      <div>
-        <h1 id="pageTitle"></h1>
-        <div class="subtitle" id="pageSubtitle"></div>
-      </div>
-    </div>
-    <button id="langBtn" class="langBtn" type="button"></button>
-  </div>
+<div class="topbar">
+<div class="titleRow">
+<div class="badgeIcon">🕊️</div>
+<div>
+<h1 id="pageTitle"></h1>
+<div class="subtitle" id="pageSubtitle"></div>
+</div>
+</div>
+<button id="langBtn"></button>
+</div>
 
-  <div class="card emailTextCard">
-    <h2 id="aboutTitle"></h2>
-    <pre id="aboutText"></pre>
-  </div>
+<div class="card">
+<h2 id="aboutTitle"></h2>
+<pre id="aboutText"></pre>
+</div>
 
-  <div class="card signatureCard">
-    <h2 class="signatureTitle" id="signatureTitle"></h2>
-    <p class="signatureText" id="signatureNote"></p>
+<div class="card">
+<h2 id="signatureTitle"></h2>
+<p id="signatureNote"></p>
 
-    <div class="inputWrap">
-      <label class="label" id="nameLabel" for="fullName"></label>
-      <input id="fullName" class="nameInput" type="text" autocomplete="name" />
-      <p class="inputHint" id="nameHint"></p>
-    </div>
-  </div>
+<label id="nameLabel"></label>
+<input id="fullName" type="text">
+<p id="nameHint"></p>
+</div>
 
-  <section class="panel">
-    <div class="panelHeader">
-      <div>
-        <h2 class="panelTitle" id="panelTitle"></h2>
-        <div class="meta" id="panelMeta"></div>
-      </div>
-      <div class="pill"><span class="dot"></span><span id="pillLabel"></span></div>
-    </div>
+<div class="card">
+<button class="sendBtn" id="sendBtn"></button>
 
-    <div class="sendBox">
-      <button class="sendBtn" id="sendBtn" disabled></button>
-
-      <div class="statusLine">
-        <span id="statusLabel"></span>
-        <span id="status">—</span>
-        <span id="error" class="error"></span>
-      </div>
-
-      <ul class="bullets" id="bullets"></ul>
-
-      <details>
-        <summary id="previewSummary"></summary>
-        <div class="statusLine"><b id="previewSubjectLabel"></b> <span class="mono" id="previewSubject"></span></div>
-        <pre class="mono" id="previewBody"></pre>
-      </details>
-
-      <div class="files" id="files"></div>
-    </div>
-  </section>
+<p><b id="previewSubjectLabel"></b> <span id="previewSubject"></span></p>
+<pre id="previewBody"></pre>
+</div>
 
 <script>
-  let LANG = "fa";
-  let nameInputTracked = false;
 
-  function trackEvent(eventName, params = {}) {
-    if (typeof gtag !== "function") return;
-    gtag("event", eventName, params);
-  }
+let LANG="fa";
+
+const SUBJECT={
+fa:"حمایت از دموکراسی در ایران و نقش رضا پهلوی در یک گذار مسالمت‌آمیز",
+en:"Support for Democracy in Iran and Reza Pahlavi’s Role in a Peaceful Transition",
+sv:"Stöd för demokrati i Iran och Reza Pahlavis roll i en fredlig övergång"
+};
+
+const UI={
+
+fa:{
+dir:"rtl",
+title:"کمپین ایمیل سوئد",
+subtitle:"با یک کلیک پیش‌نویس ایمیل آماده می‌شود.",
+aboutTitle:"ترجمه متن ایمیل",
+signatureTitle:"امضای شما",
+signatureNote:"نام خود را در صورت تمایل وارد کنید.",
+nameLabel:"نام کامل",
+nameHint:"اختیاری",
+toggle:"🌐 EN",
+sendBtn:"ارسال ایمیل",
+subjectLabel:"موضوع:"
+},
+
+en:{
+dir:"ltr",
+title:"Sweden email campaign",
+subtitle:"One click opens a ready email draft.",
+aboutTitle:"Email message",
+signatureTitle:"Your signature",
+signatureNote:"Enter your name if you wish.",
+nameLabel:"Full name",
+nameHint:"Optional",
+toggle:"🌐 SV",
+sendBtn:"Send email",
+subjectLabel:"Subject:"
+},
+
+sv:{
+dir:"ltr",
+title:"Sverige e-postkampanj",
+subtitle:"Ett klick öppnar ett färdigt e-postutkast.",
+aboutTitle:"E-posttext",
+signatureTitle:"Din signatur",
+signatureNote:"Du kan skriva ditt namn om du vill.",
+nameLabel:"Fullständigt namn",
+nameHint:"Valfritt",
+toggle:"🌐 FA",
+sendBtn:"Skicka e-post",
+subjectLabel:"Ämne:"
+}
+
+};
+
+function setLang(lang){
+
+LANG=lang;
+const t=UI[lang];
+
+document.documentElement.lang=lang;
+document.documentElement.dir=t.dir;
+
+document.getElementById("pageTitle").textContent=t.title;
+document.getElementById("pageSubtitle").textContent=t.subtitle;
+
+document.getElementById("aboutTitle").textContent=t.aboutTitle;
+document.getElementById("signatureTitle").textContent=t.signatureTitle;
+document.getElementById("signatureNote").textContent=t.signatureNote;
+
+document.getElementById("nameLabel").textContent=t.nameLabel;
+document.getElementById("nameHint").textContent=t.nameHint;
+
+document.getElementById("langBtn").textContent=t.toggle;
+
+document.getElementById("sendBtn").textContent=t.sendBtn;
+
+document.getElementById("previewSubjectLabel").textContent=t.subjectLabel;
+document.getElementById("previewSubject").textContent=SUBJECT[lang];
+
+}
+
+document.getElementById("langBtn").onclick=()=>{
+
+if(LANG==="fa") setLang("en");
+else if(LANG==="en") setLang("sv");
+else setLang("fa");
+
+};
+
+setLang("fa");
 
-  const UI = {
-    fa: {
-      dir:"rtl",
-      title:"کمپین ایمیل سوئد",
-      subtitle:"با یک کلیک، پیش‌نویس آماده در برنامه ایمیل شما باز می‌شود.\nاولین گیرنده در قسمت To قرار می‌گیرد و بقیه گیرندگان در Bcc هستند.",
-      aboutTitle:"ترجمه متن ایمیل",
-      aboutText:`موضوع: درخواست از پارلمان سوئد برای حمایت از مردم ایران
-
-متن:
-
-نمایندگان محترم پارلمان سوئد،
-تصمیم‌گیرندگان محترم،
-
-من فردی با اصالت ایرانی هستم که در سوئد زندگی می‌کنم. این نامه را برای شما می‌نویسم زیرا وضعیت ایران برای بسیاری از ما اهمیت بسیار زیادی دارد.
-
-مردم ایران برای آزادی، دموکراسی و حقوق بنیادین بشر مبارزه می‌کنند. به همین دلیل امیدوارم سوئد همچنان به‌طور روشن از حق مردم ایران برای تعیین آینده کشور خود و تلاش برای تغییر دموکراتیک حمایت کند.
-
-در عین حال، مهم است که تمامیت ارضی و وحدت ملی ایران مورد احترام و حفاظت قرار گیرد. نظام سیاسی آینده ایران باید بر پایه اراده آزاد مردم ایران و مطابق با حقوق بین‌الملل شکل بگیرد.
-
-برای آنکه یک گذار آینده باثبات باشد و از هرج‌ومرج یا خلأ قدرت جلوگیری شود، هماهنگی و رهبری نیز ضروری است. در این زمینه، مایلم بر نقش شاهزاده رضا پهلوی در تلاش برای گذار دموکراتیک تأکید کنم. بسیاری از ایرانیان او را شخصیتی وحدت‌بخش می‌دانند که می‌تواند در دوران گذار به ثبات کمک کند و گروه‌های مختلف را حول یک ایران دموکراتیک متحد سازد.
-
-همچنین از شما درخواست می‌کنم که همچنان به موارد نقض حقوق بشر در ایران توجه کنید و آن‌ها را به‌روشنی محکوم نمایید. مقامات ایرانی بارها اینترنت را برای خاموش کردن اعتراضات و پنهان کردن نقض حقوق بشر قطع کرده‌اند. این امر غیرقابل قبول است و باید با واکنش‌های روشن بین‌المللی مواجه شود.
-
-همچنین مهم است که از غیرنظامیان محافظت شود. مردم عادی نباید هزینه درگیری‌های سیاسی را بپردازند. در عین حال، جامعه بین‌المللی باید به‌روشنی محکوم کند که سپاه پاسداران از بیمارستان‌ها، مدارس و مناطق مسکونی به‌عنوان پوشش برای فعالیت‌های نظامی خود استفاده می‌کند.
-
-امیدوارم سوئد همچنان فشار سیاسی و دیپلماتیک بر مقامات ایرانی را ادامه دهد تا زمانی که مردم ایران بتوانند در آزادی و در یک نظام دموکراتیک زندگی کنند. همچنین مایلم شما را تشویق کنم که اقدامات قوی‌تری را در اروپا بررسی کنید، برای مثال بستن سفارت‌های رژیم ایران تا زمانی که تغییرات واقعی رخ دهد و نقض حقوق بشر متوقف شود.
-
-مردم ایران شایسته آزادی، دموکراسی و احترام به حقوق بنیادین خود هستند. امیدوارم سوئد همچنان به‌طور روشن در کنار آنان بایستد.
-
-با احترام،`,
-      signatureTitle:"امضای شما",
-      signatureNote:"لطفاً نام خود را برای امضا وارد کنید تا به ایمیل ارزش و اعتبار بیشتری بدهد.\nما هیچ‌یک از این اطلاعات را در هیچ جایی ذخیره نمی‌کنیم، بنابراین نام شما محفوظ می‌ماند.\nدر صورت تمایل می‌توانید متن ایمیل را کمی تغییر دهید تا کاملاً تکراری نباشد.\nاگر برای کشورهای دیگر هم به این پلتفرم نیاز دارید، به ما اطلاع دهید.",
-      nameLabel:"نام کامل",
-      namePlaceholder:"نام خود را اینجا بنویسید",
-      nameHint:"این قسمت اختیاری است.",
-      toggle:"🌐 EN",
-
-      panelTitle:"ارسال ایمیل به اعضای پارلمان سوئد",
-      panelGroup:"پارلمان سوئد",
-      panelMeta:"گیرندگان: لیست ایمیل ۱ • متن: پیام ۱",
-      sendBtn:"✅ ارسال ایمیل",
-      statusLabel:"وضعیت: ",
-      loaded:(n)=>`بارگذاری شد: ${n} ایمیل`,
-      bullets:[
-        "پیش‌نویس ایمیل با گیرندگان آماده می‌شود.",
-        "اولین گیرنده در To و بقیه در Bcc قرار می‌گیرند.",
-        "در صورت وارد کردن نام، نام شما در پایان ایمیل اضافه می‌شود."
-      ],
-      previewSummary:"نمایش موضوع و متن ایمیل",
-      subjectLabel:"موضوع:",
-      files:"فایل‌ها: mail1.txt + message1.txt",
-      dash:"—",
-      errorPrefix:"خطا: "
-    },
-
-    en: {
-      dir:"ltr",
-      title:"Sweden email campaign",
-      subtitle:"One click opens a ready draft in your email app.\nThe first recipient is placed in the To field and the remaining recipients are included in the Bcc field.",
-      aboutTitle:"English translation of the email message",
-      aboutText:`Subject: Appeal to the Swedish Parliament to support the Iranian people
-
-Body:
-
-Dear Members of the Swedish Parliament,
-Dear decision-makers,
-
-I am a person of Iranian origin living in Sweden. I am writing to you because the situation in Iran is deeply important to many of us.
-
-The Iranian people are fighting for freedom, democracy, and fundamental human rights. Therefore, I hope Sweden will continue to clearly support the Iranian people’s right to determine their country’s future and to strive for democratic change.
-
-At the same time, it is important that Iran’s territorial integrity and national unity be respected and protected. Iran’s future political system must be based on the free will of the Iranian people and comply with international law.
-
-For a future transition to be stable and to avoid chaos or a power vacuum, coordination and leadership are also needed. In this context, I would like to highlight Crown Prince Reza Pahlavi’s role in the effort for a democratic transition. Many Iranians see him as a unifying figure who can contribute to stability during a transition period and help unite different groups around a democratic Iran.
-
-I would also like to ask you to continue to pay attention to and clearly condemn the abuses taking place in Iran. The Iranian authorities have repeatedly shut down the internet to silence protests and conceal human rights violations. This is unacceptable and should be met with clear international reactions.
-
-It is also important that civilians are protected. Ordinary people should not have to pay the price for political conflicts. At the same time, the international community should clearly condemn the fact that Iran’s Revolutionary Guard uses hospitals, schools, and civilian areas as cover for its military activities.
-
-I hope Sweden will continue to apply political and diplomatic pressure on the Iranian authorities until the Iranian people can live in freedom and under a democratic system. I would also like to encourage you to consider stronger measures within Europe, for example closing the Iranian regime’s embassies until real changes take place and the human rights violations end.
-
-The Iranian people deserve freedom, democracy, and respect for their fundamental rights. I hope Sweden will continue to stand clearly on their side.
-
-Respectfully,`,
-      signatureTitle:"Your signature",
-      signatureNote:"Please write your name for the signature to give more value to the email.\nWe do not save any of this data or your name anywhere, so you will be safe.\nFeel free to slightly change the email so it is not fully repetitive.\nIf you need to use this platform for other countries as well, please let us know.",
-      nameLabel:"Full name",
-      namePlaceholder:"Write your name here",
-      nameHint:"This field is optional.",
-      toggle:"🌐 SV",
-
-      panelTitle:"Send email to members of the Swedish Parliament",
-      panelGroup:"Swedish Parliament",
-      panelMeta:"Recipients: email list 1 • Text: message 1",
-      sendBtn:"✅ Send email",
-      statusLabel:"Status: ",
-      loaded:(n)=>`Loaded: ${n} emails`,
-      bullets:[
-        "A draft email with recipients is prepared.",
-        "The first recipient goes in To and the rest go in Bcc.",
-        "If a name is entered, it is added at the end of the email."
-      ],
-      previewSummary:"Show subject and body",
-      subjectLabel:"Subject:",
-      files:"Files: mail1.txt + message1.txt",
-      dash:"—",
-      errorPrefix:"Error: "
-    },
-
-    sv: {
-      dir:"ltr",
-      title:"Sverigekampanj för e-post",
-      subtitle:"Med ett klick öppnas ett färdigt utkast i din e-postapp.\nDen första mottagaren placeras i To-fältet och övriga mottagare läggs i Bcc.",
-      aboutTitle:"E-posttext",
-      aboutText:`Bästa ledamöter i Sveriges riksdag,
-Bästa beslutsfattare,
-
-Jag är en person med iranskt ursprung som bor i Sverige. Jag skriver till er eftersom situationen i Iran är mycket viktig för många av oss.
-
-Det iranska folket kämpar för frihet, demokrati och grundläggande mänskliga rättigheter. Därför hoppas jag att Sverige fortsätter att tydligt stödja det iranska folkets rätt att själva bestämma över sitt lands framtid och att kunna sträva efter en demokratisk förändring.
-
-Samtidigt är det viktigt att Irans territoriella integritet och nationella enhet respekteras och skyddas. Irans framtida politiska system måste bygga på det iranska folkets fria vilja och följa internationell rätt.
-
-För att en framtida övergång ska bli stabil och för att undvika kaos eller maktvakuum behövs också samordning och ledarskap. I detta sammanhang vill jag lyfta fram kronprins Reza Pahlavis roll i arbetet för en demokratisk övergång. Många iranier ser honom som en samlande person som kan bidra till stabilitet under en övergångsperiod och hjälpa till att ena olika grupper kring ett demokratiskt Iran.
-
-Jag vill också be er att fortsätta uppmärksamma och tydligt fördöma de övergrepp som sker i Iran. De iranska myndigheterna har vid flera tillfällen stängt ner internet för att tysta protester och dölja brott mot mänskliga rättigheter. Detta är oacceptabelt och bör mötas av tydliga internationella reaktioner.
-
-Det är också viktigt att civila skyddas. Vanliga människor ska inte behöva betala priset för politiska konflikter. Samtidigt bör det internationella samfundet tydligt fördöma att Irans revolutionsgarde använder sjukhus, skolor och civila områden som skydd för sina militära aktiviteter.
-
-Jag hoppas att Sverige fortsätter att utöva politiskt och diplomatiskt tryck på de iranska myndigheterna tills det iranska folket kan leva i frihet och i ett demokratiskt system. Jag vill också uppmuntra er att överväga starkare åtgärder inom Europa, till exempel att stänga den iranska regimens ambassader tills verkliga förändringar sker och brotten mot mänskliga rättigheter upphör.
-
-Det iranska folket förtjänar frihet, demokrati och respekt för sina grundläggande rättigheter. Jag hoppas att Sverige fortsätter att stå tydligt på deras sida.
-
-Med vänliga hälsningar,
-[Name]`,
-      signatureTitle:"Din signatur",
-      signatureNote:"Skriv gärna ditt namn för signaturen så att mejlet får mer tyngd och trovärdighet.\nVi sparar inte denna information eller ditt namn någonstans.\nDu kan gärna ändra texten lite så att den inte blir helt identisk varje gång.\nOm du vill använda plattformen även för andra länder, låt oss veta.",
-      nameLabel:"Fullständigt namn",
-      namePlaceholder:"Skriv ditt namn här",
-      nameHint:"Detta fält är valfritt.",
-      toggle:"🌐 FA",
-
-      panelTitle:"Skicka e-post till ledamöter i Sveriges riksdag",
-      panelGroup:"Sveriges riksdag",
-      panelMeta:"Mottagare: e-postlista 1 • Text: meddelande 1",
-      sendBtn:"✅ Skicka e-post",
-      statusLabel:"Status: ",
-      loaded:(n)=>`Laddat: ${n} e-postadresser`,
-      bullets:[
-        "Ett utkast med mottagare förbereds.",
-        "Den första mottagaren går i To och resten i Bcc.",
-        "Om du skriver ditt namn läggs det till i slutet av mejlet."
-      ],
-      previewSummary:"Visa ämne och text",
-      subjectLabel:"Ämne:",
-      files:"Filer: mail1.txt + message1.txt",
-      dash:"—",
-      errorPrefix:"Fel: "
-    }
-  };
-
-  const PANEL = {
-    mailFile:"mail1.txt",
-    msgFile:"message1.txt",
-    emails:[],
-    subject:"",
-    body:"",
-    loaded:false,
-    error:""
-  };
-
-  function setLang(lang){
-    LANG = lang;
-    const t = UI[LANG];
-
-    document.documentElement.lang = LANG;
-    document.documentElement.dir = t.dir;
-    document.title = t.title;
-
-    document.getElementById("pageTitle").textContent = t.title;
-    document.getElementById("pageSubtitle").textContent = t.subtitle;
-    document.getElementById("aboutTitle").textContent = t.aboutTitle;
-    document.getElementById("aboutText").textContent = t.aboutText;
-    document.getElementById("signatureTitle").textContent = t.signatureTitle;
-    document.getElementById("signatureNote").textContent = t.signatureNote;
-    document.getElementById("nameLabel").textContent = t.nameLabel;
-    document.getElementById("fullName").placeholder = t.namePlaceholder;
-    document.getElementById("nameHint").textContent = t.nameHint;
-    document.getElementById("langBtn").textContent = t.toggle;
-
-    document.getElementById("panelTitle").textContent = t.panelTitle;
-    document.getElementById("pillLabel").textContent = t.panelGroup;
-    document.getElementById("panelMeta").textContent = t.panelMeta;
-    document.getElementById("sendBtn").textContent = t.sendBtn;
-    document.getElementById("statusLabel").textContent = t.statusLabel;
-    document.getElementById("previewSummary").textContent = t.previewSummary;
-    document.getElementById("previewSubjectLabel").textContent = t.subjectLabel;
-    document.getElementById("files").textContent = t.files;
-
-    renderPanel();
-  }
-
-  document.getElementById("langBtn").addEventListener("click", () => {
-    const previousLang = LANG;
-    const next = (LANG === "fa") ? "en" : (LANG === "en") ? "sv" : "fa";
-
-    trackEvent("language_switch", {
-      event_category: "engagement",
-      event_label: "language button",
-      from_language: previousLang,
-      to_language: next,
-      page_name: "sweden_campaign"
-    });
-
-    setLang(next);
-  });
-
-  document.getElementById("fullName").addEventListener("input", (e) => {
-    if (!nameInputTracked && e.target.value.trim().length > 0) {
-      nameInputTracked = true;
-      trackEvent("name_input_started", {
-        event_category: "engagement",
-        event_label: "signature name input",
-        language: LANG,
-        page_name: "sweden_campaign"
-      });
-    }
-    renderPanel();
-  });
-
-  function normalizeEmails(text){
-    return text
-      .split(/\r?\n/)
-      .map(l => l.trim())
-      .filter(Boolean)
-      .filter(l => !l.startsWith("#"));
-  }
-
-  function parseMessage(text){
-    const subjectLine = text.match(/^SUBJECT:\s*(.*)$/m);
-    const bodySplit = text.split(/^\s*BODY:\s*$/m);
-
-    const subject = subjectLine ? subjectLine[1].trim() : "";
-    const body = (bodySplit.length > 1) ? bodySplit.slice(1).join("\n").trim() : "";
-    return { subject, body };
-  }
-
-  function getSignedBody(body){
-    const name = document.getElementById("fullName").value.trim();
-    if(!name) return body || "";
-    const safeBody = body || "";
-    return `${safeBody}\n\n${name}`;
-  }
-
-  function buildMailto(emails, subject, body){
-    const to = emails[0] || "";
-    const bccList = emails.slice(1);
-
-    const toEncoded = encodeURIComponent(to);
-    const bccEncoded = encodeURIComponent(bccList.join(","));
-    const s = encodeURIComponent(subject || "");
-    const b = encodeURIComponent(body || "");
-
-    let url = `mailto:${toEncoded}?subject=${s}&body=${b}`;
-
-    if (bccList.length > 0) {
-      url += `&bcc=${bccEncoded}`;
-    }
-
-    return url;
-  }
-
-  function setPanelError(msg){
-    PANEL.error = msg;
-    const errEl = document.getElementById("error");
-    errEl.textContent = msg ? (" — " + msg) : "";
-  }
-
-  function renderPanel(){
-    const t = UI[LANG];
-    const finalBody = getSignedBody(PANEL.body);
-
-    document.getElementById("status").textContent = PANEL.loaded ? t.loaded(PANEL.emails.length || 0) : t.loaded(0);
-
-    const ul = document.getElementById("bullets");
-    ul.innerHTML = "";
-    for(const line of t.bullets){
-      const li = document.createElement("li");
-      li.textContent = line;
-      ul.appendChild(li);
-    }
-
-    document.getElementById("previewSubject").textContent = PANEL.subject || t.dash;
-    document.getElementById("previewBody").textContent = finalBody || t.dash;
-
-    const ready = PANEL.loaded && PANEL.emails.length > 0 && (PANEL.subject.length > 0 || PANEL.body.length > 0) && !PANEL.error;
-    document.getElementById("sendBtn").disabled = !ready;
-  }
-
-  async function loadPanel(){
-    setPanelError("");
-
-    try{
-      const [mailRes, msgRes] = await Promise.all([
-        fetch(PANEL.mailFile, { cache:"no-store" }),
-        fetch(PANEL.msgFile, { cache:"no-store" })
-      ]);
-
-      if(!mailRes.ok) throw new Error(`${PANEL.mailFile} not found`);
-      if(!msgRes.ok) throw new Error(`${PANEL.msgFile} not found`);
-
-      const [mailTxt, msgTxt] = await Promise.all([mailRes.text(), msgRes.text()]);
-
-      PANEL.emails = normalizeEmails(mailTxt);
-      const parsed = parseMessage(msgTxt);
-      PANEL.subject = parsed.subject;
-      PANEL.body = parsed.body;
-      PANEL.loaded = true;
-
-      trackEvent("page_ready", {
-        event_category: "page_state",
-        event_label: "sweden campaign loaded",
-        language: LANG,
-        recipient_count: PANEL.emails.length,
-        has_subject: PANEL.subject ? 1 : 0,
-        has_body: PANEL.body ? 1 : 0,
-        page_name: "sweden_campaign"
-      });
-
-      renderPanel();
-    }catch(e){
-      PANEL.loaded = false;
-      PANEL.emails = [];
-      PANEL.subject = "";
-      PANEL.body = "";
-      setPanelError(UI[LANG].errorPrefix + e.message);
-
-      trackEvent("page_load_error", {
-        event_category: "page_state",
-        event_label: "sweden campaign load error",
-        language: LANG,
-        error_message: String(e.message || "unknown error"),
-        page_name: "sweden_campaign"
-      });
-
-      renderPanel();
-    }
-  }
-
-  document.getElementById("sendBtn").addEventListener("click", () => {
-    if(!PANEL.loaded || !PANEL.emails.length) return;
-
-    const finalBody = getSignedBody(PANEL.body);
-    const mailtoUrl = buildMailto(PANEL.emails, PANEL.subject, finalBody);
-
-    let navigated = false;
-    const openMailClient = () => {
-      if (navigated) return;
-      navigated = true;
-      window.location.href = mailtoUrl;
-    };
-
-    trackEvent("send_email_click", {
-      event_category: "email_campaign",
-      event_label: "Sweden Parliament Send Button",
-      language: LANG,
-      recipient_count: PANEL.emails.length,
-      has_name: document.getElementById("fullName").value.trim() ? 1 : 0,
-      page_name: "sweden_campaign",
-      value: 1,
-      event_callback: openMailClient,
-      event_timeout: 1200
-    });
-
-    setTimeout(openMailClient, 1300);
-  });
-
-  (async function init(){
-    setLang("fa");
-    await loadPanel();
-    renderPanel();
-  })();
 </script>
 
 </body>
