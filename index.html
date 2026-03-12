@@ -226,7 +226,13 @@
       box-shadow:0 0 0 3px rgba(255,255,255,.06);
     }
 
-    .meta{margin:10px 0 12px;color:var(--muted);position:relative}
+    .meta{
+      margin:10px 0 12px;
+      color:#fff;
+      position:relative;
+      font-weight:900;
+      line-height:1.7;
+    }
 
     .sendBox{
       position:relative;
@@ -248,11 +254,6 @@
     .statusLine{margin-top:10px;color:var(--muted)}
     .bullets{margin:10px 0 0 18px;color:var(--muted)}
     .bullets li{margin:6px 0}
-    .batchNote{
-      margin-top:12px;
-      font-weight:900;
-      color:#fff;
-    }
 
     details{margin-top:10px}
     details summary{cursor:pointer;font-weight:900}
@@ -333,7 +334,6 @@
       </div>
 
       <ul class="bullets" id="bullets"></ul>
-      <div class="batchNote" id="batchNote"></div>
 
       <details>
         <summary id="previewSummary"></summary>
@@ -390,11 +390,10 @@
       namePlaceholder:"نام خود را اینجا بنویسید",
       nameHint:"این قسمت اختیاری است.",
       toggle:"🌐 EN",
-      batchNote:"هر بار فقط ۴۰ گیرنده انتخاب می‌شود. اگر این کار را چند بار تکرار کنید، در نهایت کل فهرست پوشش داده می‌شود.",
+      panelMeta:(total,batch)=>`نکته مهم: در مجموع ${total} ایمیل بارگذاری شده است. هر بار فقط ${batch} گیرنده انتخاب می‌شود تا احتمال شناسایی به‌عنوان اسپم توسط سامانه‌های ایمیل کمتر شود. اگر این کار را چند بار تکرار کنید، در نهایت کل فهرست پوشش داده می‌شود.`,
 
       panelTitle:"ارسال ایمیل به اعضای پارلمان سوئد",
       panelGroup:"پارلمان سوئد",
-      panelMeta:"گیرندگان: لیست ایمیل ۱ • متن: پیام ۱",
       sendBtn:"✅ ارسال ایمیل",
       statusLabel:"وضعیت: ",
       loaded:(n)=>`بارگذاری شد: ${n} ایمیل`,
@@ -445,11 +444,10 @@ Respectfully,`,
       namePlaceholder:"Write your name here",
       nameHint:"This field is optional.",
       toggle:"🌐 SV",
-      batchNote:"Only 40 recipients are selected each time. If you repeat this enough times, the full list will eventually be covered.",
+      panelMeta:(total,batch)=>`Important: ${total} emails are loaded in total. Only ${batch} recipients are selected each time to reduce the chance of being flagged as spam by email systems. If you repeat this enough times, the full list will eventually be covered.`,
 
       panelTitle:"Send email to members of the Swedish Parliament",
       panelGroup:"Swedish Parliament",
-      panelMeta:"Recipients: email list 1 • Text: message 1",
       sendBtn:"✅ Send email",
       statusLabel:"Status: ",
       loaded:(n)=>`Loaded: ${n} emails`,
@@ -500,11 +498,10 @@ Med vänliga hälsningar,`,
       namePlaceholder:"Skriv ditt namn här",
       nameHint:"Detta fält är valfritt.",
       toggle:"🌐 FA",
-      batchNote:"Endast 40 mottagare väljs varje gång. Om du upprepar detta tillräckligt många gånger kommer hela listan så småningom att täckas.",
+      panelMeta:(total,batch)=>`Viktig information: Totalt ${total} e-postadresser har laddats. Endast ${batch} mottagare väljs varje gång för att minska risken att meddelandet markeras som spam av e-postsystem. Om du upprepar detta tillräckligt många gånger kommer hela listan så småningom att täckas.`,
 
       panelTitle:"Skicka e-post till ledamöter i Sveriges riksdag",
       panelGroup:"Sveriges riksdag",
-      panelMeta:"Mottagare: e-postlista 1 • Text: meddelande 1",
       sendBtn:"✅ Skicka e-post",
       statusLabel:"Status: ",
       loaded:(n)=>`Laddade: ${n} e-postadresser`,
@@ -552,11 +549,13 @@ Med vänliga hälsningar,`,
     document.getElementById("fullName").placeholder = t.namePlaceholder;
     document.getElementById("nameHint").textContent = t.nameHint;
     document.getElementById("langBtn").textContent = t.toggle;
-    document.getElementById("batchNote").textContent = t.batchNote;
 
     document.getElementById("panelTitle").textContent = t.panelTitle;
     document.getElementById("pillLabel").textContent = t.panelGroup;
-    document.getElementById("panelMeta").textContent = t.panelMeta;
+    document.getElementById("panelMeta").textContent =
+      typeof t.panelMeta === "function"
+        ? t.panelMeta(PANEL.emails.length || 0, PANEL.batchSize)
+        : t.panelMeta;
     document.getElementById("sendBtn").textContent = t.sendBtn;
     document.getElementById("statusLabel").textContent = t.statusLabel;
     document.getElementById("previewSummary").textContent = t.previewSummary;
@@ -720,6 +719,7 @@ Med vänliga hälsningar,`,
         page_name: "sweden_campaign"
       });
 
+      setLang(LANG);
       renderPanel();
     }catch(e){
       PANEL.loaded = false;
